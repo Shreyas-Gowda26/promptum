@@ -5,6 +5,8 @@
 ![Python 3.13+](https://img.shields.io/badge/Python-3.13+-blue?style=for-the-badge&logo=python)
 ![Async](https://img.shields.io/badge/Async-First-green?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+[![PyPI Version](https://img.shields.io/pypi/v/promptum?style=for-the-badge&logo=pypi&logoColor=white&color=orange)](https://pypi.org/project/promptum/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/promptum?style=for-the-badge&logo=pypi&logoColor=white&color=blueviolet)](https://pypi.org/project/promptum/)
 
 **Test LLMs Like a Pro.**
 
