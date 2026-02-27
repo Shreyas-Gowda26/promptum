@@ -78,9 +78,8 @@ class OpenRouterClient(LLMProvider):
         if conflicts:
             raise ValueError(
                 f"Cannot override reserved payload fields: {', '.join(sorted(conflicts))}"
-                )
+            )
         payload.update(kwargs)
-
 
         for attempt in range(config.max_attempts):
             start_time = time.perf_counter()
@@ -129,9 +128,7 @@ class OpenRouterClient(LLMProvider):
                 if attempt < config.max_attempts - 1:
                     await self._apply_retry_delay(attempt, config, retry_delays)
                 else:
-                    raise ProviderTransientError(
-                        config.max_attempts, retry_delays
-                    ) from e
+                    raise ProviderTransientError(config.max_attempts, retry_delays) from e
 
         raise ProviderRetryExhaustedError(
             config.max_attempts, last_status_code, last_response_body, retry_delays

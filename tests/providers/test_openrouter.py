@@ -367,8 +367,6 @@ async def test_generate_uses_per_call_retry_config_over_default(
     async with OpenRouterClient(api_key="k", default_retry_config=default_config) as client:
         client._client.post = AsyncMock(side_effect=responses)
 
-        content, _ = await client.generate(
-            prompt="hello", model="m", retry_config=per_call_config
-        )
+        content, _ = await client.generate(prompt="hello", model="m", retry_config=per_call_config)
 
     assert content == "Hello, world!"
