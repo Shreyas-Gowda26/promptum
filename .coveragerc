@@ -1,6 +1,7 @@
 [run]
 source = promptum
 omit = tests/*
+branch = true
 
 [report]
 fail_under = 90
